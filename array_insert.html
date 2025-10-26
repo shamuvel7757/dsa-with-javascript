@@ -5,8 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Array Traversing</title>
     <script>
-      let data = [3, 54, 67, 86, 90, 2, 4, 65];
+      let data = [3, 54, 67, 86, 90];
+      let newEl = 30;
+      let position = 2;
+      console.log(data);
+      for (let i = data.length - 1; i >= 0; i--) {
+        if (i >= position) {
+          data[i + 1] = data[i];
+          if (i == position) {
+            data[i] = newEl;
+          }
+        }
+      }
+      console.log(data);
+
+      function getElement() {
+        let position = document.getElementById("position").value;
+        let newEl = document.getElementById("element").value;
+
+        alert(`enter new element ${newEl} at position ${position} `);
+      }
     </script>
   </head>
-  <body></body>
+  <body>
+    <input type="text" placeholder="enter position" id="position" />
+    <input type="text" placeholder="enter element" id="element" />
+    <button onclick="getElement()">submit</button>
+  </body>
 </html>

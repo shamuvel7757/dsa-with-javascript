@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>rough_code</title>
+    <script>
+      let data = [3, 54, 67, 86, 90, 2, 4, 65, 33, 10, 42, 0];
+
+      function getElement() {
+        let el = document.getElementById("input").value;
+
+        if (el < data.length && typeof parseInt(el) === "number" && el >= 0) {
+          alert("Enter value is : " + data[el]);
+        } else {
+          alert("Please enter valid number");
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <input type="text" id="input" />
+    <button onclick="getElement()">submit</button>
+  </body>
+</html>
